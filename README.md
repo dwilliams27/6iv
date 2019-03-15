@@ -1,0 +1,1 @@
+<div style="text-align:center"><img src ="https://www.pcgamesn.com/wp-content/uploads/legacy/civilization-2.jpg" /></div>
