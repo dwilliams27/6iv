@@ -1,0 +1,16 @@
+{
+  "filepath": "./tileset.png",
+  "grass": {
+    "data": [
+      {
+        "x": 6,
+        "y": 64,
+        "width": 16,
+        "height": 16
+      }
+    ],
+    "sameSize": true,
+    "xOffset": 1,
+    "count": 4
+  }
+}
