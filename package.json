@@ -17,6 +17,10 @@
   },
   "homepage": "https://github.com/dwilliams27/6iv#readme",
   "dependencies": {
-    "pixi.js": "^5.0.0-rc.2"
+    "pixi.js": "^5.0.0-rc.2",
+    "webpack": "^4.29.6"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.3.0"
   }
 }
