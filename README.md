@@ -16,7 +16,7 @@ End Point: 127.0.0.1:8080/graphql
 Headers: ( Content-Type -> application/graphql )
 Body:
 
-> query {getNameQuery}. 
-> mutation {incrementScountQuery(increaseAmount: 12)}. 
-> mutation {putNameQuery(name : "peter")}. 
-
+> query {getNameQuery}    
+> mutation {incrementScoreQuery(increaseAmount: 12)}  
+> mutation {putNameQuery(name : "peter")}  
+> mutation {incrementScoreQuery(increaseAmount: 12), putNameQuery(name : "peter")}    
