@@ -10,7 +10,7 @@ type Schemas struct {
 	GqlApiObjectConfigs []graphql.ObjectConfig
 }
 
-func NewGetNameQueryObject(game *game.GameInstance) *graphql.Field {
+func NewGetNameQueryField(game *game.GameInstance) *graphql.Field {
 	return &graphql.Field{
 		Type: graphql.String,
 		Resolve: func(p graphql.ResolveParams) (interface{}, error) {
@@ -19,7 +19,7 @@ func NewGetNameQueryObject(game *game.GameInstance) *graphql.Field {
 	}
 }
 
-func NewPutNameQueryObject(game *game.GameInstance) *graphql.Field {
+func NewPutNameQueryField(game *game.GameInstance) *graphql.Field {
 	return &graphql.Field{
 		Type: graphql.String,
 		Args: graphql.FieldConfigArgument{
@@ -35,7 +35,7 @@ func NewPutNameQueryObject(game *game.GameInstance) *graphql.Field {
 	}
 }
 
-func NewIncrementScoreQuery(game *game.GameInstance) *graphql.Field {
+func NewIncreaseScoreQueryField(game *game.GameInstance) *graphql.Field {
 	return &graphql.Field{
 		Type: graphql.String,
 		Args: graphql.FieldConfigArgument{
@@ -48,4 +48,13 @@ func NewIncrementScoreQuery(game *game.GameInstance) *graphql.Field {
 			return fmt.Sprintf("Increased game score to: %d", game.IncreaseGameScore(increaseAmount)), nil
 		},
 	}
+}
+
+func NewIncrementTurnQueryField(game *game.GameInstance) *graphql.Field {
+	return &graphql.Field{
+		Type: graphql.String,
+		Resolve: func(p graphql.ResolveParams) (interface{}, error) {
+			return fmt.Sprintf("Incremented game turn counter to: %d", game.IncrementTurnCounter()), nil
+		},
+	}	
 }

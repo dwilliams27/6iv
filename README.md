@@ -12,11 +12,13 @@ go run cmd/http_handler.go
 
 Example working GraphQL Queries:
 
-End Point: 127.0.0.1:8080/graphql
-Headers: ( Content-Type -> application/graphql )
-Body:
+End Point: 127.0.0.1:8080/graphql  
+Headers: ( Content-Type -> application/graphql )  
+Body:   
 
 > query {getNameQuery}    
+> query {getPlayersQuery}   
 > mutation {incrementScoreQuery(increaseAmount: 12)}  
 > mutation {putNameQuery(name : "peter")}  
 > mutation {incrementScoreQuery(increaseAmount: 12), putNameQuery(name : "peter")}    
+> mutation {addPlayerQuery(newPlayerName: "Peter2", newPlayerGoldCount: 30)}    

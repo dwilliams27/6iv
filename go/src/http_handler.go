@@ -8,26 +8,25 @@ import (
 	"net/http"
 )
 
-type inputQuery struct {
-	age  int
-	name string
-}
-
 func main() {
-	mainGame := game.GameInstance{0, "yeet"}
+	mainGame := game.NewGame(4, "yeet")
+	gamePlayers := mainGame.PlayerRoster
 
 	queryType := graphql.NewObject(graphql.ObjectConfig{
 		Name: "Query",
 		Fields: graphql.Fields{
-			"getNameQuery": api.NewGetNameQueryObject(&mainGame),
+			"getNameQuery": api.NewGetNameQueryField(&mainGame),
+			"getPlayersQuery": api.NewGetPlayersQueryField(&gamePlayers),
 		},
 	})
 
 	mutationType := graphql.NewObject(graphql.ObjectConfig{
 		Name: "Mutation",
 		Fields: graphql.Fields{
-			"putNameQuery": api.NewPutNameQueryObject(&mainGame),
-			"incrementScoreQuery": api.NewIncrementScoreQuery(&mainGame),
+			"putNameQuery": api.NewPutNameQueryField(&mainGame),
+			"incrementScoreQuery": api.NewIncreaseScoreQueryField(&mainGame),
+			"incrementTurnQuery": api.NewIncrementTurnQueryField(&mainGame),
+			"addPlayerQuery": api.NewAddPlayerQueryField(&gamePlayers),
 		},
 	})
 
