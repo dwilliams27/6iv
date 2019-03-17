@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/dwilliams27/6iv/issues"
   },
-  "homepage": "https://github.com/dwilliams27/6iv#readme"
+  "homepage": "https://github.com/dwilliams27/6iv#readme",
+  "dependencies": {
+    "pixi.js": "^5.0.0-rc.2"
+  }
 }
