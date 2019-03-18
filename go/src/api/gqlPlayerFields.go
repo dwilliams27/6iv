@@ -2,7 +2,7 @@ package api
 
 import (
 	"fmt"
-	"github.com/graphql-go/graphql"
+	"github.com/edinpeter/graphql"
 	"../game"
 )
 

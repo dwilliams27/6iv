@@ -3,8 +3,8 @@ package main
 import (
 	"./api"
 	"./game"
-	"github.com/graphql-go/graphql"
-	"github.com/graphql-go/handler"
+	"github.com/edinpeter/graphql"
+	"github.com/edinpeter/handler"
 	"net/http"
 )
 

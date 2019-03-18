@@ -2,13 +2,9 @@ package api
 
 import (
 	"fmt"
-	"github.com/graphql-go/graphql"
+	"github.com/edinpeter/graphql"
 	"../game"
 )
-
-type Schemas struct {
-	GqlApiObjectConfigs []graphql.ObjectConfig
-}
 
 func NewGetNameQueryField(game *game.GameInstance) *graphql.Field {
 	return &graphql.Field{
